@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import "./assets/css/nav.css"
+import "./assets/css/about.css"
+import "./assets/css/pollwindow.css"
+import "./assets/css/pollsalient.css"
+import "./assets/css/pollmeasure.css"
+import "bootstrap/dist/css/bootstrap.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import "bootstrap/dist/css/bootstrap.css";
-import nav_bar from './components/nav_bar';
+import { BrowserRouter} from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <nav_bar />
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
