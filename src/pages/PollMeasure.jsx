@@ -11,15 +11,15 @@ let showNext = true;
 let showNextWindow = false;
 
 // Initiate Array with Picked Items
-const Questionnaire = JSON.parse(localStorage.getItem("Questionnaire") || "[]");
-const picked_items = [];
-for (let outer_index = 0; outer_index < 6; outer_index++) {
-    for (let inner_index = 0; inner_index < 8; inner_index++) {
-        if (Questionnaire[outer_index][inner_index].picked == 1) {
-        picked_items.push(Questionnaire[outer_index][inner_index]);   
-        }
-    }   
-}
+// const Questionnaire = JSON.parse(localStorage.getItem("Questionnaire") || "[]");
+// const picked_items = [];
+// for (let outer_index = 0; outer_index < 6; outer_index++) {
+//     for (let inner_index = 0; inner_index < 8; inner_index++) {
+//         if (Questionnaire[outer_index][inner_index].picked == 1) {
+//         picked_items.push(Questionnaire[outer_index][inner_index]);   
+//         }
+//     }   
+// }
 
 
 // End initiate Array
