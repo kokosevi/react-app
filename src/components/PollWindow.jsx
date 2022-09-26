@@ -119,7 +119,7 @@ function PollWindow() {
     Questionnaire[2] = adventure;
     Questionnaire[3] = power;
     Questionnaire[4] = respect;
-    Questionnaire[4] = intrinsicvalue;
+    Questionnaire[5] = intrinsicvalue;
     localStorage.setItem('Questionnaire', JSON.stringify(Questionnaire));
 }
 
