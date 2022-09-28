@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import {useState, useEffect, Component} from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import { $ }  from 'react-jquery-plugin'
 import { PolarArea } from 'react-chartjs-2';
@@ -12,42 +12,35 @@ import {
     Title,
   } from 'chart.js';
 
+
+
+
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend, Title,);
 
 
 const Questionnaire = JSON.parse(localStorage.getItem("Questionnaire") || "[]");
+console.log(Questionnaire);
 
 
 // initiate variables for basic needs
-let Security = 0;
-let Reliability = 0;
-let Pleasure = 0;
-let Adventure = 0;
-let Power = 0;
-let Fame = 0;
-let IntrinsicValue = 0;
 
+
+let basicNeedsValuesArray = new Array(7).fill(2);
 
 // calculate item final_score
-let counter = 0;
-let divider = 0;
-Questionnaire.forEach( e =>{
-    if (e.picked == 1) {
-      Questionnaire[counter].final_score = (3*e.picked) + (10*e.relevance);
-      Security = Security + Questionnaire[counter].final_score;
-      console.log(e.final_score);
-      counter++;
-      divider++;
-      console.log(divider);
-    } else {
-      counter++;
-    }
-  });
+for (let outer_index = 0; outer_index < 7; outer_index++) {
+    for (let inner_index = 0; inner_index < 8; inner_index++) {
+        if (Questionnaire[outer_index][inner_index].picked == 1) {
+            if (Questionnaire[outer_index][inner_index].posneg == 1) {
+                basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] + 1;
+            } else {
+                basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] - 1;
+            }
+        }
+    }   
+}
   localStorage.setItem('Questionnaire', JSON.stringify(Questionnaire));
 
-//   Calculate Basic Needs score
-  Security = Security/divider;
-  console.log(Security);
 
 
 
@@ -57,13 +50,13 @@ export const data = {
     {
       label: '# of Votes',
       data:[
-        4,                 // Rule
-        13,                 // Fame
-        15,                 // Intrinsic-Value
-        8,                 // Reliability
-        6,                 // Security
-        13,                  // Pleasure
-        7                  // Adventure
+        basicNeedsValuesArray[4],                 // Rule
+        basicNeedsValuesArray[5],                 // Fame
+        basicNeedsValuesArray[6],                 // Intrinsic-Value
+        basicNeedsValuesArray[1],                 // Reliability
+        basicNeedsValuesArray[0],                 // Security
+        basicNeedsValuesArray[2],                  // Pleasure
+        basicNeedsValuesArray[3]                  // Adventure
     ],
     backgroundColor:[ 
         "rgba(139, 69, 19, 0.8)",       // Rule
@@ -106,7 +99,7 @@ export const options= {
     },
     scales: {
         r: {
-            max: 15,
+            max: 8,
             grid: {
                 display: false
             },
@@ -120,7 +113,11 @@ export const options= {
 
 
 function PollChart() {
-    return ( <PolarArea data={data} options={options} />
+    
+
+    return ( 
+    
+    <PolarArea data={data} options={options} />
      );
 }
 
