@@ -31,7 +31,7 @@ function PollWindow() {
         security[2].item = "Belonging is very important to me";                                                                     //"Zugehörigkeit ist mir sehr wichtig.";
         security[3].item = "It would be terryfing for me if I get very sick on vacation and no one I know is with me";                       //"Es wäre für mich schlimm, wenn ich im Urlaub sehr krank werde und kein Bekannter bei mir ist.";
         security[4].item = "I feel uncomfortable when I don't have familiar people around me for a long time";                           //"Ich fühle mich unwohl, wenn ich längere Zeit keine vertrauten Menschen um mich habe.";
-        security[5].item = "In a new professional environment, I feel much more comfortable when a colleague I am familiar with is present";         //"In einem neuen beruflichen Umfeld fühle ich mich viel wohler, wenn ein mir vertrauter Kollege dabei ist.";
+        security[5].item = "In a new professional environment, I really appreciate a familiar colleague";         //"In einem neuen beruflichen Umfeld fühle ich mich viel wohler, wenn ein mir vertrauter Kollege dabei ist.";
         security[6].item = "I need familiar people around me";                                        //"Ich brauche vertraute Menschen um mich herum.";
         security[7].item = "Fill"; 
 

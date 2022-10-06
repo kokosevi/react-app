@@ -2,18 +2,18 @@ div.btn_salient
 {
 
             background-color: white;
-            border: 2px solid black;
+            border: 1px solid black;
             color: black;
-            padding: 0.5em 1em;
-            text-align: center;
+            /* padding: 0.5em 1em; */
             font-size: 15px;
             margin: 0.5em 1em;
             cursor: pointer;
             border-radius: 5px 5px 0px 0px;
-            width: 150px;
-            min-width: 150px;
-            display: inline-block;
-            vertical-align: middle;
+            width: 250px;
+            height: 80px;
+            /* display: inline-block; */
+            text-align: center;
+
             
 
 
@@ -25,18 +25,16 @@ div.salient{
     border: 2px solid black;
     /* margin: 1% 20% 2% 20%; */
     margin: auto;
-    width: 750px;
+    width: 950px;
     height: 60vh;
     display: grid;
     /* grid-template-columns: 170px 170px 170px 170px; */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0;
-
     /* align-items: center;
     justify-content: center; */
     background-color: rgb(249, 235, 232);
-    
     align-items: center;
 }
 
