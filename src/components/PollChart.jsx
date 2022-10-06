@@ -22,21 +22,20 @@ const Questionnaire = JSON.parse(localStorage.getItem("Questionnaire") || "[]");
 console.log(Questionnaire);
 
 
-// initiate variables for basic needs
+// initiate variables for basic needs and calculate item final_score
 let basicNeedsValuesArray = new Array(7).fill(2);
 
-// calculate item final_score
-for (let outer_index = 0; outer_index < 7; outer_index++) {
-    for (let inner_index = 0; inner_index < 7; inner_index++) {
-        if (Questionnaire[outer_index][inner_index].picked == 1) {
-            if (Questionnaire[outer_index][inner_index].posneg == 1) {
-                basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] + 1;
-            } else {
-                basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] - 1;
-            }
-        }
-    }   
-}
+// for (let outer_index = 0; outer_index < 7; outer_index++) {
+//     for (let inner_index = 0; inner_index < 7; inner_index++) {
+//         if (Questionnaire[outer_index][inner_index].picked == 1) {
+//             if (Questionnaire[outer_index][inner_index].posneg == 1) {
+//                 basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] + 1;
+//             } else {
+//                 basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] - 1;
+//             }
+//         }
+//     }   
+// }
   localStorage.setItem('Questionnaire', JSON.stringify(Questionnaire));
 
 
