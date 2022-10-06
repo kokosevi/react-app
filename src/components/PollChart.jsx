@@ -112,10 +112,10 @@ export const options= {
 
 function PollChart() {
 
-    useEffect(() => {
-        data.datasets.data[0] = basicNeedsValuesArray[0]
-        document.title = `You clicked ${count} times`;
-      });
+    // useEffect(() => {
+    //     data.datasets.data[0] = basicNeedsValuesArray[0]
+    //     document.title = `You clicked ${count} times`;
+    //   });
     
 
     return ( 
