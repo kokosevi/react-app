@@ -63,11 +63,6 @@ function setPickedAbh (basic_need, concrete_item) {
 
 const Questionnaire = JSON.parse(localStorage.getItem("Questionnaire") || "[]");
 
-// useEffect(() =>{
-
-
-// }, [])
-
 
     return (  
         <> 
@@ -77,9 +72,9 @@ const Questionnaire = JSON.parse(localStorage.getItem("Questionnaire") || "[]");
             <div style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[1][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[1][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(1, round)} className="btn_salient">{Questionnaire[1][round].item}</div>
             <div style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[2][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[2][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(2, round)} className="btn_salient">{Questionnaire[2][round].item}</div>
             <div style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[3][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[3][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(3, round)} className="btn_salient">{Questionnaire[3][round].item}</div>
-            <div className="item5" style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[4][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[4][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(4, round)} className="btn_salient">{Questionnaire[4][round].item}</div>
-            <div className="item6" style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[5][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[5][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(5, round)} className="btn_salient">{Questionnaire[5][round].item}</div>
-            <div className="item7" style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[6][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[6][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(6, round)} className="btn_salient">{Questionnaire[6][round].item}</div>
+            <div className="item5 btn_salient" style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[4][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[4][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(4, round)}>{Questionnaire[4][round].item}</div>
+            <div className="item6 btn_salient" style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[5][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[5][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(5, round)}>{Questionnaire[5][round].item}</div>
+            <div className="item7 btn_salient" style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[6][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[6][round].picked ? 'white' : '',}} onClick={() => setPickedAbh(6, round)}>{Questionnaire[6][round].item}</div>
             {/* <div style={{backgroundColor: JSON.parse(localStorage.getItem("Questionnaire"))[7][round].picked ? 'salmon' : '', color: JSON.parse(localStorage.getItem("Questionnaire"))[round][7].picked ? 'white' : '',}} onClick={() => setPickedAbh(round, 7)} id="ABH_8" className="btn_salient">{Questionnaire[round][7].item}</div> */}
          </div>
 
