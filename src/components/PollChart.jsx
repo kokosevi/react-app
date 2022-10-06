@@ -23,13 +23,11 @@ console.log(Questionnaire);
 
 
 // initiate variables for basic needs
-
-
 let basicNeedsValuesArray = new Array(7).fill(2);
 
 // calculate item final_score
 for (let outer_index = 0; outer_index < 7; outer_index++) {
-    for (let inner_index = 0; inner_index < 8; inner_index++) {
+    for (let inner_index = 0; inner_index < 7; inner_index++) {
         if (Questionnaire[outer_index][inner_index].picked == 1) {
             if (Questionnaire[outer_index][inner_index].posneg == 1) {
                 basicNeedsValuesArray[outer_index] = basicNeedsValuesArray[outer_index] + 1;
@@ -113,6 +111,11 @@ export const options= {
 
 
 function PollChart() {
+
+    useEffect(() => {
+        data.datasets.data[0] = basicNeedsValuesArray[0]
+        document.title = `You clicked ${count} times`;
+      });
     
 
     return ( 
