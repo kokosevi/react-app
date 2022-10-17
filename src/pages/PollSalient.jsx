@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { $ } from "react-jquery-plugin";
-import Stepper from "../components/Stepper";
+import PollStepper from "../components/PollStepper";
 
 let showBack = false;
 let showNext = true;
@@ -67,7 +67,7 @@ function PollSalient() {
   return (
     <>
       <div>
-        <Stepper activeStep={round} steps={steps} />
+        <PollStepper activeStep={round} steps={steps} />
       </div>
 
       <div className="salient">
