@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './App.css';
 import "./assets/css/nav.css"
 import "./assets/css/about.css"
 import "./assets/css/pollwindow.css"

@@ -1,28 +1,8 @@
 import React from "react";
 
 const ImageComponent = ({ imageUrl, altText }) => (
-  <div
-    className="image-container"
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "70vh",
-      width: "100%",
-      // border: "2px solid #333",
-      boxSizing: "border-box",
-      position: "relative",
-    }}
-  >
-    <img
-      src={imageUrl}
-      alt={altText}
-      style={{
-        height: "100%",
-        objectFit: "contain",
-      }}
-      useMap="#image-map"
-    />
+  <div className="image-container">
+    <img src={imageUrl} alt={altText} useMap="#image-map" />
     <map name="image-map">
       <area shape="circle" coords="200,200,50" href="/page1" alt="Click me!" />
       <area
