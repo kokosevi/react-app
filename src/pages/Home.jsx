@@ -7,6 +7,12 @@ import Button from "@mui/material/Button";
 function Home() {
   return (
     <React.Fragment>
+      <ImageComponent imageUrl="images/model.png" altText="model" />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <ImageComponent imageUrl="images/Gesamtmodel.png" altText="Gesamtmodel" />
       {/* <PollShortWindow /> */}
       <br />
