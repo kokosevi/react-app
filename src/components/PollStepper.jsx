@@ -15,7 +15,7 @@ export default function PollStepper(props) {
           const labelProps = {};
 
           return (
-            <Step key={label} {...stepProps}>
+            <Step {...stepProps}>
               <StepLabel {...labelProps}>{label}</StepLabel>
             </Step>
           );
