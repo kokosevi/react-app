@@ -4,6 +4,7 @@ import './App.css';
 import Nav from "./components/Nav";
 import PollWindow from "./components/PollWindow";
 import About from "./pages/About";
+import Emotions from "./pages/Emotions";
 import JungTheory from "./pages/JungTheory";
 import Home from "./pages/Home";
 import PollSalient from "./pages/PollSalient";
@@ -50,6 +51,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
+      <Route path='/Emotions' element={<Emotions/>} />
       <Route path='/JungTheory' element={<JungTheory/>} />
       {/* <Route path='/PollSalient' element={<PollSalient polData={questionnaires[active_umfrage]} onStatementSelect={resultHandler} />} /> */}
       <Route path='/PollSalient' element={<PollSalient/>} />

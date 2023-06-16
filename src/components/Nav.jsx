@@ -17,6 +17,9 @@ function Nav() {
         </Link>
         <ul>
           <li>
+            <Link to="/Emotions">Emotions</Link>
+          </li>
+          <li>
             <Link to="/JungTheory">About C.G.Jung Theory</Link>
           </li>
           <li>
